@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 10</title>
+    </head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="2">
+                <form>
+                    <label for="input1">1st Number:</label>
+                    <input type="number" id="nb1" name="input1">
+    
+                    <br>
+    
+                    <label for="input2">2nd Number:</label>
+                    <input type="number" id="nb2" name="input2">
+                </form>
+            </td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="multiply()">Multiply</button>
+                <button type="button" onclick="division()">Divide</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span>The result is:</span><br/>
+                <span id="res"></button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+     
+        function multiply() {
+            // Load the values from the inputs
+            nb1 = document.getElementById("nb1").value;
+            nb2 = document.getElementById("nb2").value;
+            // write the result to the html span
+            document.getElementById('res').innerHTML = nb1 * nb2
+        }
+
+        function division() {
+            nb1 = document.getElementById("nb1").value;
+            nb2 = document.getElementById("nb2").value;
+
+            if (nb2 != 0)
+                document.getElementById('res').innerHTML = nb1 / nb2
+            else
+                document.getElementById('res').innerHTML = "Cannot divide by 0"
+        }
+
+
+        
+        </script>
+    
+
+</body>
+</html>
